@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <View className='flex-1'>
       <View className='h-full w-full flex justify-center inte-center'>
-        <Text className='text-red-500 '>Hidsadasdasd</Text>
+        <Text className='text-blue-500'>Hidsadasdasd</Text>
       </View>
     </View>
   );
