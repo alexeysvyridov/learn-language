@@ -11,3 +11,11 @@ models:
   - name: qwen3.6:latest
     provider: ollama
     model: qwen3.6:latest
+context:
+    - provider: code  
+    - provider: docs  
+    - provider: diff  
+    - provider: terminal  
+    - provider: problems  
+    - provider: folder  
+    - provider: codebase
