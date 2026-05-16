@@ -1,26 +1,22 @@
 {
-  "home": {
-    "title": "בית",
-    "welcome": "ברוכים הבאים לאפליקציית הלמידה שלכם",
-    "description": "התחילו את מסע הלמידה שלכם היום"
-  },
-  "lessons": {
-    "title": "שיעורים",
-    "no_lessons": "אין שיעורים זמינים עדיין",
-    "start_learning": "התחילו ללמוד"
-  },
-  "words": {
+    "words": {
     "title": "מילים",
     "my_words": "המילים שלי",
-    "no_words": "טרם הוספת מילים",
-    "add_first": "הוסיפו את המילה הראשונה כדי לעקוב אחר ההתקדמות"
+    "no_words": "עדיין לא נוספו מילים",
+    "add_first": "הוסף את המילה הראשונה שלך כדי לעקוב אחר ההתקדמות",
+    "learned": "מילים שנלמדו",
+    "of_total": "מתוך",
+    "progress": "התקדמות",
+    "series": "רצף",
+    "days": "ימים",
+    "keep_up": "המשיך כך!"
   },
   "progress": {
     "title": "התקדמות",
     "total_words": "סה\"כ מילים",
-    "lessons_completed": "שיעורים הושלמו",
+    "lessons_completed": "שיעורים שהושלמו",
     "streak": "רצף ימים",
-    "view_details": "צפו בפרטים"
+    "view_details": "הצג פרטים"
   },
   "profile": {
     "title": "פרופיל",
@@ -42,8 +38,20 @@
     "english": "אנגלית",
     "hebrew": "עברית",
     "russian": "רוסית",
-    "back": "חזור",
+    "back": "חזרה",
     "save": "שמור",
-    "cancel": "ביטול"
-  }
+    "cancel": "בטל"
+  },
+  "mock_words": [
+    {"en": "Hello", "ru": "Привет"},
+    {"en": "Goodbye", "ru": "До свидания"},
+    {"en": "Thank you", "ru": "Спасибо"},
+    {"en": "Please", "ru": "Пожалуйста"},
+    {"en": "Yes", "ru": "Да"},
+    {"en": "No", "ru": "Нет"},
+    {"en": "Good morning", "ru": "Доброе утро"},
+    {"en": "Good night", "ru": "Спокойной ночи"},
+    {"en": "How are you?", "ru": "Как дела?"},
+    {"en": "I love you", "ru": "Я тебя люблю"}
+  ]
 }

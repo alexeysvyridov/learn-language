@@ -1,13 +1,14 @@
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
+import WordsPage from '@/components/feature/words/page';
 import { ThemedView } from '@/components/themed-view';
 
 export default function WordsScreen() {
   return (
     <ThemedView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.title}>Слова</Text>
-        <Text style={styles.text}>Your words vocabulary will appear here</Text>
+      <WordsPage
+       />
       </ScrollView>
     </ThemedView>
   );

@@ -39,19 +39,10 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="words/index"
+          name="words"
           options={{
             title: t('tabs.words'),
             tabBarIcon: ({ color }) => <IconSymbol size={28} name="bookmark.fill" color={color} />,
-          }}
-        />
-        <Tabs.Screen
-          name="progress/index"
-          options={{
-            title: t('tabs.progress'),
-            tabBarIcon: ({ color }) => (
-              <IconSymbol size={28} name="chart.bar.fill" color={color} />
-            ),
           }}
         />
         <Tabs.Screen
