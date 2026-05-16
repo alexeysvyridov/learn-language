@@ -1,0 +1,49 @@
+{
+  "home": {
+    "title": "בית",
+    "welcome": "ברוכים הבאים לאפליקציית הלמידה שלכם",
+    "description": "התחילו את מסע הלמידה שלכם היום"
+  },
+  "lessons": {
+    "title": "שיעורים",
+    "no_lessons": "אין שיעורים זמינים עדיין",
+    "start_learning": "התחילו ללמוד"
+  },
+  "words": {
+    "title": "מילים",
+    "my_words": "המילים שלי",
+    "no_words": "טרם הוספת מילים",
+    "add_first": "הוסיפו את המילה הראשונה כדי לעקוב אחר ההתקדמות"
+  },
+  "progress": {
+    "title": "התקדמות",
+    "total_words": "סה\"כ מילים",
+    "lessons_completed": "שיעורים הושלמו",
+    "streak": "רצף ימים",
+    "view_details": "צפו בפרטים"
+  },
+  "profile": {
+    "title": "פרופיל",
+    "settings": "הגדרות",
+    "language": "שפה",
+    "theme": "ערכת נושא",
+    "logout": "התנתק",
+    "account": "חשבון"
+  },
+  "tabs": {
+    "home": "בית",
+    "lessons": "שיעורים",
+    "words": "מילים",
+    "progress": "התקדמות",
+    "profile": "פרופיל"
+  },
+  "common": {
+    "select_language": "בחר שפה",
+    "english": "אנגלית",
+    "hebrew": "עברית",
+    "russian": "רוסית",
+    "back": "חזור",
+    "save": "שמור",
+    "cancel": "ביטול"
+  }
+}

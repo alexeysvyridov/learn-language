@@ -1,0 +1,49 @@
+{
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to your learning app",
+    "description": "Start your language learning journey today"
+  },
+  "lessons": {
+    "title": "Lessons",
+    "no_lessons": "No lessons available yet",
+    "start_learning": "Start Learning"
+  },
+  "words": {
+    "title": "Words",
+    "my_words": "My Words",
+    "no_words": "No words added yet",
+    "add_first": "Add your first word to track your progress"
+  },
+  "progress": {
+    "title": "Progress",
+    "total_words": "Total Words",
+    "lessons_completed": "Lessons Completed",
+    "streak": "Day Streak",
+    "view_details": "View Details"
+  },
+  "profile": {
+    "title": "Profile",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Logout",
+    "account": "Account"
+  },
+  "tabs": {
+    "home": "Home",
+    "lessons": "Lessons",
+    "words": "Words",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
+  "common": {
+    "select_language": "Select Language",
+    "english": "English",
+    "hebrew": "Hebrew",
+    "russian": "Russian",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}
