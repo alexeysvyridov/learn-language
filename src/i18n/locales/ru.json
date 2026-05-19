@@ -14,7 +14,7 @@
   "progress": {
     "title": "Прогресс",
     "total_words": "Всего слов",
-    "lessons_completed": "Уроков пройдено",
+    "lessons_completed": "Пройдено",
     "streak": "Дней подряд",
     "view_details": "Посмотреть детали"
   },
