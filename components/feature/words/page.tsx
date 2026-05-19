@@ -5,8 +5,7 @@ import { ProgressStatus } from './ProgressStatus';
 export default function WordsPage() {
   return (
     <MainContainer>
-    <ProgressStatus />
-    
+      <ProgressStatus />
     </MainContainer>
   );
 }
