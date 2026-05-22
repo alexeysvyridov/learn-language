@@ -30,7 +30,7 @@ function RootContent() {
         })),
         {
           text: 'Cancel',
-          onPress: () => {},
+          onPress:  () => { /* empty */ }  ,
           style: 'cancel' as const,
         },
       ],
