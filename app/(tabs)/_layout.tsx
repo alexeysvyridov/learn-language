@@ -2,7 +2,7 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import {
   StyleSheet,
-  View
+  View,
 } from 'react-native';
 
 import { HapticTab } from '@/components/haptic-tab';
@@ -18,7 +18,7 @@ export default function TabLayout() {
   return (
     <View style={{ flex: 1 }}>
       <Tabs
-      initialRouteName="home/index"
+        initialRouteName="home/index"
         screenOptions={{
           tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
           headerShown: false,
@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 12,
-    gap: 1
-  }
+    gap: 1,
+  },
 });

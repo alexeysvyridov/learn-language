@@ -13,7 +13,7 @@ import { useLanguage } from '@/hooks/use-language';
 import { Ionicons } from '@expo/vector-icons';
 import {
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
 const RTLContext = createContext(false);
@@ -47,40 +47,40 @@ function RootContent() {
           options={{
             headerShown: true,
             headerRight: ()  => (
-                  <TouchableOpacity
-                    onPress={() => setShowLanguageModal(true)}
-                    className={currentLang ? 'bg-gray-200 dark:bg-gray-700' : 'bg-gray-100 dark:bg-gray-800'}
-                    activeOpacity={0.7}>  
-                    <Ionicons
-                      name={language === 'he' ? 'language' : 'language'}
-                      size={20}
-                      color={colorScheme === 'dark' ? '#fff' : '#000'}
-                    />
-                    <Text style={[{ color: colorScheme === 'dark' ? '#fff' : '#000' }]}>
-                      {currentLang ? `${currentLang.flag} ${currentLang.name}` : headerTitle}
-                    </Text>
-                  </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setShowLanguageModal(true)}
+                className={currentLang ? 'bg-gray-200 dark:bg-gray-700' : 'bg-gray-100 dark:bg-gray-800'}
+                activeOpacity={0.7}>  
+                <Ionicons
+                  name={language === 'he' ? 'language' : 'language'}
+                  size={20}
+                  color={colorScheme === 'dark' ? '#fff' : '#000'}
+                />
+                <Text style={[{ color: colorScheme === 'dark' ? '#fff' : '#000' }]}>
+                  {currentLang ? `${currentLang.flag} ${currentLang.name}` : headerTitle}
+                </Text>
+              </TouchableOpacity>
             ),
           }}
         />
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>
 
-     <LanguageModal language={language} languages={languages} onChangeLanguage={changeLanguage} showLanguageModal={showLanguageModal} setShowLanguageModal={setShowLanguageModal} />
+      <LanguageModal language={language} languages={languages} onChangeLanguage={changeLanguage} showLanguageModal={showLanguageModal} setShowLanguageModal={setShowLanguageModal} />
       <StatusBar style="auto"  />
     </ThemeProvider>
   );
 }
 
 export default function RootLayout() {
-    const { language } = useLanguage();
-    const isRTL = language === 'he';
+  const { language } = useLanguage();
+  const isRTL = language === 'he';
 
   return (
     <I18nextProvider i18n={i18n}>
-          <RTLContext.Provider value={isRTL}>
-              <RootContent />
-          </RTLContext.Provider>
+      <RTLContext.Provider value={isRTL}>
+        <RootContent />
+      </RTLContext.Provider>
     </I18nextProvider>
   );
 }

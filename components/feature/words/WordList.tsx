@@ -4,7 +4,7 @@ import {
   StatusBar,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from 'react-native';
 
 interface Word {
@@ -64,7 +64,7 @@ export function WordList() {
 
   const toggleFavorite = (id: number) => {
     setWords(words.map(word => 
-      word.id === id ? { ...word, isFavorite: !word.isFavorite } : word
+      word.id === id ? { ...word, isFavorite: !word.isFavorite } : word,
     ));
   };
 

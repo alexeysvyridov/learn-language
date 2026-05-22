@@ -7,8 +7,8 @@ export default function WordsScreen() {
   return (
     <ThemedView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
-      <WordsPage
-       />
+        <WordsPage
+        />
       </ScrollView>
     </ThemedView>
   );
