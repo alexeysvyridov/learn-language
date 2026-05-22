@@ -1,33 +1,14 @@
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 
 import { ThemedView } from '@/components/themed-view';
 
 export default function LessonsScreen() {
   return (
-    <ThemedView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.title}>Уроки</Text>
-        <Text style={styles.text}>Your lessons will appear here</Text>
+    <ThemedView className="flex-1">
+      <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', padding: 16 }}>
+        <Text className="text-2xl font-bold mb-4">Уроки</Text>
+        <Text className="text-base">Your lessons will appear here</Text>
       </ScrollView>
     </ThemedView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    padding: 16,
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  text: {
-    fontSize: 16,
-  },
-});
