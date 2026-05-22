@@ -1,6 +1,6 @@
-import { ThemedText } from "@/components/themed-text";
-import { ThemedView } from "@/components/themed-view";
-import { useTranslation } from "react-i18next";
+import { ThemedText } from '@/components/themed-text';
+import { ThemedView } from '@/components/themed-view';
+import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, View } from 'react-native';
 
 const stats = [
@@ -19,10 +19,10 @@ export  function ProgressStatus() {
         
         <View className="flex flex-row mb-6 gap-2">
           {stats.map((stat) => (
-            <View key={stat.key} className={["flex-col justify-center items-center rounded-lg p-4 mb-4 gap-2", stat.bg].join(' ')}>
+            <View key={stat.key} className={['flex-col justify-center items-center rounded-lg p-4 mb-4 gap-2', stat.bg].join(' ')}>
               <Text className="text-2xl mb-2">{stat.icon}</Text>
-                <ThemedText className="text-sm font-bold mb-2">{stat.value}</ThemedText>
-                <ThemedText type="small" className="text-sm opacity-80">{t(`progress.${stat.key}`)}</ThemedText>
+              <ThemedText className="text-sm font-bold mb-2">{stat.value}</ThemedText>
+              <ThemedText type="small" className="text-sm opacity-80">{t(`progress.${stat.key}`)}</ThemedText>
 
             </View>
           ))}

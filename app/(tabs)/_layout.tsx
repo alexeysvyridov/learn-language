@@ -1,8 +1,7 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import {
-  StyleSheet,
-  View
+  View,
 } from 'react-native';
 
 import { HapticTab } from '@/components/haptic-tab';
@@ -11,6 +10,8 @@ import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useTranslation } from 'react-i18next';
 
+type ColorScheme = 'light' | 'dark';
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const { t } = useTranslation();
@@ -18,9 +19,9 @@ export default function TabLayout() {
   return (
     <View style={{ flex: 1 }}>
       <Tabs
-      initialRouteName="home/index"
+        initialRouteName="home/index"
         screenOptions={{
-          tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+          tabBarActiveTintColor: Colors[colorScheme as ColorScheme ?? 'light'].tint,
           headerShown: false,
           tabBarButton: HapticTab,
         }}>
@@ -58,55 +59,3 @@ export default function TabLayout() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  languageSelector: {
-    position: 'absolute',
-    top: 50,
-    left: 16,
-    right: 16,
-    height: 40,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    backgroundColor: 'rgba(128,128,128,0.2)',
-    borderRadius: 12,
-    paddingHorizontal: 12,
-    zIndex: 10,
-  },
-  languageText: {
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalContent: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-    width: '80%',
-    maxWidth: 300,
-  },
-  modalTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    marginBottom: 16,
-    textAlign: 'center',
-  },
-  languageList: {
-    gap: 12,
-  },
-  languageOption: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 12,
-    gap: 1
-  }
-});

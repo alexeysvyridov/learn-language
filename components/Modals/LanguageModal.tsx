@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
-import { useTranslation } from "react-i18next";
-import { Modal, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
+import { useTranslation } from 'react-i18next';
+import { Modal, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 type LanguageModalProps = { 
     showLanguageModal: boolean;
@@ -10,54 +10,54 @@ type LanguageModalProps = {
     language: string;
 }
 export function LanguageModal({showLanguageModal,languages = [], setShowLanguageModal, onChangeLanguage, language}: LanguageModalProps) {
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   
   return (
-       <Modal
-        visible={showLanguageModal}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setShowLanguageModal(false)}>
-        <Pressable
-          style={styles.modalOverlay}
-          onPress={() => setShowLanguageModal(false)}>
-          <Pressable style={styles.modalContent} onPress={(e) => e.stopPropagation()}>
-            <Text style={styles.modalTitle}>{t('common.select_language')}</Text>
-            <View style={styles.languageList}>
-              {languages.map((lang) => (
-                <TouchableOpacity
-                  key={lang.code}
+    <Modal
+      visible={showLanguageModal}
+      transparent
+      animationType="fade"
+      onRequestClose={() => setShowLanguageModal(false)}>
+      <Pressable
+        style={styles.modalOverlay}
+        onPress={() => setShowLanguageModal(false)}>
+        <Pressable style={styles.modalContent} onPress={(e) => e.stopPropagation()}>
+          <Text style={styles.modalTitle}>{t('common.select_language')}</Text>
+          <View style={styles.languageList}>
+            {languages.map((lang) => (
+              <TouchableOpacity
+                key={lang.code}
+                style={[
+                  styles.languageOption,
+                  language === lang.code && styles.selectedLanguageOption,
+                ]}
+                onPress={() => {
+                  setShowLanguageModal(false);
+                  onChangeLanguage?.(lang.code);
+                }}>
+                <Text style={styles.languageFlag}>{lang.flag}</Text>
+                <Text
                   style={[
-                    styles.languageOption,
-                    language === lang.code && styles.selectedLanguageOption,
-                  ]}
-                  onPress={() => {
-                    setShowLanguageModal(false);
-                    onChangeLanguage?.(lang.code);
-                  }}>
-                  <Text style={styles.languageFlag}>{lang.flag}</Text>
-                  <Text
-                    style={[
-                      styles.languageName,
-                      language === lang.code && styles.selectedLanguageText,
-                      lang.direction === 'rtl' && { textAlign: 'right' },
-                    ]}>
-                    {lang.name}
-                  </Text>
-                  {language === lang.code && (
-                    <Ionicons name="checkmark-circle" size={20} color="#007AFF" />
-                  )}
-                </TouchableOpacity>
-              ))}
-            </View>
-            <TouchableOpacity
-              style={styles.modalCloseButton}
-              onPress={() => setShowLanguageModal(false)}>
-              <Text style={styles.modalCloseText}>{t('common.cancel')}</Text>
-            </TouchableOpacity>
-          </Pressable>
+                    styles.languageName,
+                    language === lang.code && styles.selectedLanguageText,
+                    lang.direction === 'rtl' && { textAlign: 'right' },
+                  ]}>
+                  {lang.name}
+                </Text>
+                {language === lang.code && (
+                  <Ionicons name="checkmark-circle" size={20} color="#007AFF" />
+                )}
+              </TouchableOpacity>
+            ))}
+          </View>
+          <TouchableOpacity
+            style={styles.modalCloseButton}
+            onPress={() => setShowLanguageModal(false)}>
+            <Text style={styles.modalCloseText}>{t('common.cancel')}</Text>
+          </TouchableOpacity>
         </Pressable>
-      </Modal>
+      </Pressable>
+    </Modal>
   );
 }
 
